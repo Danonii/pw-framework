@@ -162,6 +162,6 @@ func (framework *PWFramework) Init(data *PWFrameworkInitData) {
 	framework.initRoutes(data.Routes_init_func)
 }
 
-func (framework *PWFramework) Serve() {
-	log.Fatal(http.ListenAndServe(":8080", nil))
+func (framework *PWFramework) Serve(address string) {
+	log.Fatal(http.ListenAndServe(address, nil))
 }
